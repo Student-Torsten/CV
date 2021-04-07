@@ -1,0 +1,122 @@
+/*genrell settings*/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto", sans-serif;
+}
+::selection {
+  background-color: black;
+  color: white;
+  font-size: 200%;
+}
+html {
+  font-size: 20px;
+}
+@media screen and (min-width: 786px) {
+  html {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+@media print {
+  .main-nav,
+  .hireme {
+    display: none;
+  }
+}
+
+/* specific styles*/
+
+header {
+  padding: 16 16 100 16;
+}
+.overallheader {
+  text-align: center;
+  background-color: lemonchiffon;
+  padding: 1rem;
+}
+.main {
+  margin: 0.8rem;
+}
+main > article + article {
+  margin-top: 1rem;
+  border-top: 0.05rem solid yellow;
+}
+
+.main-nav a + a {
+  margin-left: 0.5rem;
+}
+.main-nav a {
+  color: salmon;
+}
+.main-nav a:hover {
+  background-color: gold;
+}
+.main-nav a:active {
+  background-color: blue;
+}
+
+.icon::after {
+  content: "😎";
+}
+.main {
+  max-width: 50ch;
+  margin: 0 auto;
+  padding: 0.8rem;
+}
+.article-heading {
+  position: relative;
+  left: -0.8rem;
+}
+.experience-header {
+  display: inline;
+  padding-right: 1rem;
+}
+.experience-subheader {
+  display: inline;
+  padding-right: 1rem;
+}
+.hireme {
+  background-color: yellowgreen;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  font-weight: bold;
+}
+.header h1 {
+  font-size: 2rem;
+}
+.header p {
+  size: 0.5rem;
+}
+@media screen and (min-width: 786px) {
+  main > article + article {
+    margin-top: 1.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  main > article + article {
+    margin-top: 2rem;
+  }
+  .hireme {
+    position: fixed;
+  }
+}
