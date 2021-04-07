@@ -72,8 +72,9 @@ main > article + article {
   background-color: blue;
 }
 .main-nav {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .experiences-header {
   display: flex;
