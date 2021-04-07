@@ -71,12 +71,19 @@ main > article + article {
 .main-nav a:active {
   background-color: blue;
 }
-
+.main-nav {
+  display: inline-flex;
+  flex-direction: column;
+}
+.experiences-header {
+  display: flex;
+  flex-direction: column;
+}
 .icon::after {
   content: "😎";
 }
 .main {
-  max-width: 50ch;
+  max-width: 75ch;
   margin: 0 auto;
   padding: 0.8rem;
 }
@@ -85,12 +92,16 @@ main > article + article {
   left: -0.8rem;
 }
 .experience-header {
-  display: inline;
+  _display: inline;
   padding-right: 1rem;
 }
 .experience-subheader {
-  display: inline;
+  _display: inline;
   padding-right: 1rem;
+}
+.experience-header {
+  display: inline-flex;
+  flex-direction: column;
 }
 .hireme {
   background-color: yellowgreen;
@@ -110,6 +121,16 @@ main > article + article {
 @media screen and (min-width: 786px) {
   main > article + article {
     margin-top: 1.5rem;
+  }
+  .main-nav {
+    flex-direction: row;
+    display: inline-flex;
+    justify-content: center;
+  }
+  .experiences-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
   }
 }
 @media screen and (min-width: 992px) {
