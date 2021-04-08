@@ -1,4 +1,11 @@
 /*genrell settings*/
+html {
+  --primary-color: rgb(208, 247, 164);
+  --secondary-color: rgb(64, 236, 241);
+  --nav-bg-color: gold;
+  --nav-link-color: salmon;
+  --nav-link-act-color: blue;
+}
 
 *,
 *:before,
@@ -46,9 +53,15 @@ html {
 header {
   padding: 16 16 100 16;
 }
+.header {
+}
 .overallheader {
   text-align: center;
-  background-color: lemonchiffon;
+  background-image: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   padding: 1rem;
 }
 .main {
@@ -56,20 +69,20 @@ header {
 }
 main > article + article {
   margin-top: 1rem;
-  border-top: 0.05rem solid yellow;
+  border-top: 0.05rem solid var(--primary-color);
 }
 
 .main-nav a + a {
   margin-left: 0.5rem;
 }
 .main-nav a {
-  color: salmon;
+  color: var(--nav-link-color);
 }
 .main-nav a:hover {
-  background-color: gold;
+  background-color: var(--nav-bg-color);
 }
 .main-nav a:active {
-  background-color: blue;
+  background-color: var(--nav-link-act-color);
 }
 .main-nav {
   display: flex;
@@ -105,7 +118,7 @@ main > article + article {
   flex-direction: column;
 }
 .hireme {
-  background-color: yellowgreen;
+  background-color: var(--primary-color);
   position: absolute;
   top: 1rem;
   right: 2rem;
@@ -141,4 +154,12 @@ main > article + article {
   .hireme {
     position: fixed;
   }
+}
+footer {
+  text-align: center;
+  background-image: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
 }
