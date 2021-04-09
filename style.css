@@ -53,8 +53,7 @@ html {
 header {
   padding: 16 16 100 16;
 }
-.header {
-}
+
 .overallheader {
   text-align: center;
   background-image: linear-gradient(
@@ -134,6 +133,11 @@ main > article + article {
   padding: 0.4rem;
   border-radius: 0.4rem;
   font-weight: bold;
+  transform-origin: top right;
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+.overallheader:hover .hireme {
+  transform: scale(1.5);
 }
 .header h1 {
   font-size: 2rem;
@@ -171,7 +175,4 @@ footer {
     var(--primary-color),
     var(--secondary-color)
   );
-}
-.header:hover .hireme {
-  transform: scale(1.5);
 }
