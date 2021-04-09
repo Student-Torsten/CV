@@ -77,9 +77,18 @@ main > article + article {
 }
 .main-nav a {
   color: var(--nav-link-color);
+  transition-property: background-color;
+  transition-duration: 1s;
 }
 .main-nav a:hover {
   background-color: var(--nav-bg-color);
+}
+.main-nav a:focus {
+  background-color: var(--nav-bg-color);
+  outline: auto;
+  outline-width: 2px;
+  outline-offset: 5px;
+  outline-color: var(--nav-link-act-color);
 }
 .main-nav a:active {
   background-color: var(--nav-link-act-color);
@@ -162,4 +171,7 @@ footer {
     var(--primary-color),
     var(--secondary-color)
   );
+}
+.header:hover .hireme {
+  transform: scale(1.5);
 }
